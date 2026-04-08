@@ -7,7 +7,7 @@ public class AccesoDatos {
     private LocalDateTime fechaEntrada;
     private LocalDateTime fechaSalida;
 
-    public Acceso(String idUsuario, LocalDateTime fechaEntrada) {
+    public AccesoDatos(String idUsuario, LocalDateTime fechaEntrada) {
         this.idUsuario = idUsuario;
         this.fechaEntrada = fechaEntrada;
     }
