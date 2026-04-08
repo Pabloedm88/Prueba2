@@ -15,15 +15,20 @@ public class ArchivoDatos {
         }
     }
 
-    public void registrarAcceso(Acceso a) throws IOException {
+   public void registrarAcceso(Acceso a) throws IOException {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_ACCESOS, true))) {
             String salida = (a.getFechaSalida() != null) ? a.getFechaSalida().toString() : "PENDIENTE";
             bw.write(a.getIdUsuario() + "|" + a.getFechaEntrada() + "|" + salida);
             bw.newLine();
         }
     }
-}
-}
 
-    
+    public void mostrarHistorial() throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(FILE_ACCESOS))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                System.out.println(linea);
+            }
+        }
+    }
 }
