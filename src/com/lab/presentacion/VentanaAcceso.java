@@ -7,11 +7,11 @@ import java.awt.event.ActionListener;
 import com.lab.proceso.ControladorLaboratorio;
 
 public class VentanaAcceso extends JFrame {
-    private ControladorLaboratorio controlador = new ControladorLaboratorio();
+    private Controlador controlador = new Controlador();
     private JTextField txtIdUsuario;
     private JTextArea areaReporte;
 
-    public ventanaAcceso() {
+    public VentanaAcceso() {
         // 1. Configuración básica de la ventana
         setTitle("Sistema de Control de Acceso");
         setSize(500, 400);
@@ -59,6 +59,6 @@ public class VentanaAcceso extends JFrame {
 
     public static void main(String[] args) {
         // Esto permite ejecutar la ventana directamente
-        new ventanaAcceso();
+        new VentanaAcceso();
     }
 }
