@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import com.lab.proceso.ControladorLaboratorio;
+import com.lab.presentacion.Controlador;
 
 public class VentanaAcceso extends JFrame {
     private Controlador controlador = new Controlador();
