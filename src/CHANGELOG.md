@@ -35,5 +35,5 @@ Este sistema permite gestionar de manera eficiente el ingreso y salida de usuari
 - ## [1.3] - 2026-04-07
 ### Añadido
 - Creación de la carpeta `logica`.
-- Implementación de `.java` para manejo de persistencia.
+- Implementación de `Controlado.java` para manejo de persistencia.
 - Métodos para escritura en archivos de texto plano.
