@@ -1,11 +1,11 @@
 package com.lab.presentacion;
 
-import com.lab.proceso.ControladorLaboratorio;
+import com.lab.proceso.Controlador;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ControladorLaboratorio logica = new ControladorLaboratorio();
+        Controlador logica = new Controlador();
         Scanner sn = new Scanner(System.in);
         int opcion = 0;
 
