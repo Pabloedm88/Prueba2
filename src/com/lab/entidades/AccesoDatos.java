@@ -2,7 +2,7 @@ package com.lab.entidades;
 
 import java.time.LocalDateTime;
 
-public class Acceso {
+public class AccesoDatos {
     private String idUsuario;
     private LocalDateTime fechaEntrada;
     private LocalDateTime fechaSalida;
