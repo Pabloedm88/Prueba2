@@ -15,7 +15,7 @@ public class ArchivoDatos {
         }
     }
 
-   public void registrarAcceso(Acceso a) throws IOException {
+   public void registrarAcceso(AccesoDatos a) throws IOException {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_ACCESOS, true))) {
             String salida = (a.getFechaSalida() != null) ? a.getFechaSalida().toString() : "PENDIENTE";
             bw.write(a.getIdUsuario() + "|" + a.getFechaEntrada() + "|" + salida);
