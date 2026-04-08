@@ -1,7 +1,7 @@
 package com.lab.datos;
 
 import com.lab.entidades.Usuario;
-import com.lab.entidades.Acceso;
+import com.lab.entidades.AccesoDatos;
 import java.io.*;
 
 public class ArchivoDatos {
