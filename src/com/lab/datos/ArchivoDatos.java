@@ -3,8 +3,6 @@ package com.lab.datos;
 import com.lab.entidades.Usuario;
 import com.lab.entidades.Acceso;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ArchivoDatos {
     private final String FILE_USUARIOS = "usuarios.txt";
@@ -17,7 +15,6 @@ public class ArchivoDatos {
         }
     }
 
-    // Guarda un registro de entrada o salida
     public void registrarAcceso(Acceso a) throws IOException {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_ACCESOS, true))) {
             String salida = (a.getFechaSalida() != null) ? a.getFechaSalida().toString() : "PENDIENTE";
@@ -25,14 +22,7 @@ public class ArchivoDatos {
             bw.newLine();
         }
     }
-
-public void mostrarHistorial() throws IOException {
-    try (BufferedReader br = new BufferedReader(new FileReader(FILE_ACCESOS))) {
-        String linea;
-        while ((linea = br.readLine()) != null) {
-            System.out.println(linea);
-        }
-    }
+}
 }
 
     
