@@ -2,9 +2,7 @@ package com.lab.presentacion;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import com.lab.presentacion.Controlador;
+import com.lab.logica.Controlador; // Ajustado a tu carpeta 'logica' y archivo 'Controlador.java'
 
 public class VentanaAcceso extends JFrame {
     private Controlador controlador = new Controlador();
@@ -12,45 +10,41 @@ public class VentanaAcceso extends JFrame {
     private JTextArea areaReporte;
 
     public VentanaAcceso() {
-        // 1. Configuración básica de la ventana
-        setTitle("Sistema de Control de Acceso");
+        setTitle("Sistema de Control de Acceso - Laboratorio");
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); // Centrar en pantalla
+        setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
 
-        // 2. Panel Superior (Ingreso de datos)
+        // Panel de entrada
         JPanel panelSuperior = new JPanel(new GridLayout(2, 2, 5, 5));
-        panelSuperior.setBorder(BorderFactory.createTitledBorder("Registro de Acceso"));
+        panelSuperior.setBorder(BorderFactory.createTitledBorder("Registro"));
         
-        panelSuperior.add(new JLabel(" ID de Usuario:"));
+        panelSuperior.add(new JLabel(" ID Usuario:"));
         txtIdUsuario = new JTextField();
         panelSuperior.add(txtIdUsuario);
 
-        JButton btnEntrada = new JButton("Registrar ENTRADA");
-        JButton btnSalida = new JButton("Registrar SALIDA");
+        JButton btnEntrada = new JButton("Registrar Entrada");
         panelSuperior.add(btnEntrada);
-        panelSuperior.add(btnSalida);
 
-        // 3. Panel Central (Reportes)
+        // Área de texto para ver qué pasa
         areaReporte = new JTextArea();
         areaReporte.setEditable(false);
         JScrollPane scroll = new JScrollPane(areaReporte);
-        scroll.setBorder(BorderFactory.createTitledBorder("Historial de Movimientos"));
 
-        // 4. Acciones de los botones
+        // Lógica del botón
         btnEntrada.addActionListener(e -> {
             try {
                 String id = txtIdUsuario.getText();
-                controlador.registrarEntrada(id);
-                areaReporte.append("ENTRADA registrada: " + id + "\n");
+                // Asegúrate que tu clase Controlador tenga el método registrarEntrada
+                controlador.registrarEntrada(id); 
+                areaReporte.append("EXITO: Entrada registrada para " + id + "\n");
                 txtIdUsuario.setText("");
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
             }
         });
 
-        // Agregar componentes al JFrame
         add(panelSuperior, BorderLayout.NORTH);
         add(scroll, BorderLayout.CENTER);
         
@@ -58,7 +52,6 @@ public class VentanaAcceso extends JFrame {
     }
 
     public static void main(String[] args) {
-        // Esto permite ejecutar la ventana directamente
         new VentanaAcceso();
     }
 }
