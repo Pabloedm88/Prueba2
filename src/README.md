@@ -28,3 +28,5 @@ El proyecto sigue una estructura de 4 capas para separar responsabilidades:
 
 ### 6. Diagrama de Arquitectura
 ![Diagrama de Capas](diagrama.png)
+
+###7. Se puede ejecutar la interfaz grafica.
