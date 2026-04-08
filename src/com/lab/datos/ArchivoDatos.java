@@ -25,4 +25,15 @@ public class ArchivoDatos {
             bw.newLine();
         }
     }
+
+public void mostrarHistorial() throws IOException {
+    try (BufferedReader br = new BufferedReader(new FileReader(FILE_ACCESOS))) {
+        String linea;
+        while ((linea = br.readLine()) != null) {
+            System.out.println(linea);
+        }
+    }
+}
+
+    
 }
