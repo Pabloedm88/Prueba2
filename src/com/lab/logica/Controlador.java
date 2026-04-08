@@ -17,7 +17,7 @@ public class Controlador {
     }
 
     public void registrarEntrada(String idUsuario) throws Exception {
-        Acceso entrada = new Acceso(idUsuario, LocalDateTime.now());
+        AccesoDatos entrada = new AccesoDatos(idUsuario, LocalDateTime.now());
         archivo.registrarAcceso(entrada);
     }
 }
