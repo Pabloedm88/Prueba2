@@ -2,7 +2,7 @@ package com.lab.logica;
 
 import com.lab.datos.ArchivoDatos; 
 import com.lab.entidades.Usuario;
-import com.lab.entidades.Acceso;
+import com.lab.entidades.AccesoDatos;
 import java.time.LocalDateTime;
 
 public class Controlador { 
