@@ -5,7 +5,7 @@ import com.lab.entidades.Usuario;
 import com.lab.entidades.Acceso;
 import java.time.LocalDateTime;
 
-public class ControladorLaboratorio {
+public class Controlador {
     private ArchivoDatos archivo = new ArchivoDatos();
 
     // Regla: Registrar usuario validando que no existan datos vacíos
