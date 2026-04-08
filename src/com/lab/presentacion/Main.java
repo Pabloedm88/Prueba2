@@ -1,6 +1,6 @@
 package com.lab.presentacion;
 
-import com.lab.proceso.Controlador;
+import com.lab.logica.Controlador;
 import java.util.Scanner;
 
 public class Main {
