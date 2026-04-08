@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Controlador logica = new Controlador();
-        Scanner sn = new Scanner(System.in);
+        try (Scanner sn = new Scanner(System.in)){
         int opcion = 0;
 
         while (opcion != 4) {
@@ -43,5 +43,6 @@ public class Main {
                 System.out.println("ERROR: " + e.getMessage());
             }
         }
+      }
     }
 }
